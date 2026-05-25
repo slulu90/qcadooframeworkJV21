@@ -23,6 +23,7 @@
  */
 package com.qcadoo.commons.functional;
 
+import java.util.Objects;
 import org.apache.commons.lang3.ObjectUtils;
 
 import com.google.common.base.Function;
@@ -110,17 +111,17 @@ public abstract class Either<L, R> {
                 return false;
             }
             Left oth = (Left) obj;
-            return ObjectUtils.equals(value, oth.value);
+            return Objects.equals(value, oth.value);
         }
 
         @Override
         public int hashCode() {
-            return ObjectUtils.hashCode(value);
+            return Objects.hashCode(value);
         }
 
         @Override
         public String toString() {
-            return String.format("Left(%s)", ObjectUtils.toString(value));
+            return String.format("Left(%s)", Objects.toString(value, ""));
         }
     }
 
@@ -169,17 +170,17 @@ public abstract class Either<L, R> {
                 return false;
             }
             Right oth = (Right) obj;
-            return ObjectUtils.equals(value, oth.value);
+            return Objects.equals(value, oth.value);
         }
 
         @Override
         public int hashCode() {
-            return ObjectUtils.hashCode(value);
+            return Objects.hashCode(value);
         }
 
         @Override
         public String toString() {
-            return String.format("Right(%s)", ObjectUtils.toString(value));
+            return String.format("Right(%s)", Objects.toString(value, ""));
         }
     }
 

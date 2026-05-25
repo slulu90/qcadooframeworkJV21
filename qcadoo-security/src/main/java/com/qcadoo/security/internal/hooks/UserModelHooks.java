@@ -78,7 +78,7 @@ public class UserModelHooks {
     private TranslationService translationService;
 
     public boolean preventSelfDeletion(final DataDefinition userDD, final Entity user) {
-        if (ObjectUtils.equals(securityService.getCurrentUserId(), user.getId())) {
+        if (Objects.equals(securityService.getCurrentUserId(), user.getId())) {
             user.addGlobalError(L_SELF_DELETION_ERROR);
 
             return false;

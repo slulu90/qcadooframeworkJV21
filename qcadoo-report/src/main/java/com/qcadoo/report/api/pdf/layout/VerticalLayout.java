@@ -25,6 +25,7 @@ package com.qcadoo.report.api.pdf.layout;
 
 import java.util.List;
 
+import java.util.Objects;
 import org.apache.commons.lang3.ObjectUtils;
 
 import com.google.common.collect.Lists;
@@ -125,11 +126,11 @@ public class VerticalLayout {
             return false;
         }
         VerticalLayout rhs = (VerticalLayout) obj;
-        return ObjectUtils.equals(this.contents, rhs.contents);
+        return Objects.equals(this.contents, rhs.contents);
     }
 
     @Override
     public int hashCode() {
-        return ObjectUtils.hashCode(contents);
+        return Objects.hashCode(contents);
     }
 }
