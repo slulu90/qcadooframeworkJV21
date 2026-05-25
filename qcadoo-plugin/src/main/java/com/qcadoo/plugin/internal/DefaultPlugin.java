@@ -24,6 +24,8 @@
 package com.qcadoo.plugin.internal;
 
 import com.qcadoo.plugin.api.*;
+import com.qcadoo.plugin.api.Module;
+import com.qcadoo.plugin.api.Module;
 import com.qcadoo.plugin.internal.api.InternalPlugin;
 import com.qcadoo.tenant.api.MultiTenantUtil;
 
