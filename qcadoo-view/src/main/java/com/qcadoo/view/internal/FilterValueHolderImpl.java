@@ -140,7 +140,7 @@ public class FilterValueHolderImpl implements FilterValueHolder {
         }
 
         try {
-            return new Integer(filterValue.getString(key));
+            return Integer.parseInt(filterValue.getString(key));
         } catch (NumberFormatException e) {
             throw new IllegalStateException(String.format(INVALID_TYPE, Integer.class.getName()));
         } catch (JSONException e) {

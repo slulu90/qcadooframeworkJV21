@@ -69,9 +69,9 @@ public final class ButtonComponentPattern extends AbstractComponentPattern {
             } else if ("correspondingViewInModal".equals(option.getType())) {
                 correspondingViewInModal = Boolean.parseBoolean(option.getValue());
             } else if ("modalWidth".equals(option.getType())) {
-                modalWidth = new Integer(option.getValue());
+                modalWidth = Integer.parseInt(option.getValue());
             } else if ("modalHeight".equals(option.getType())) {
-                modalHeight = new Integer(option.getValue());
+                modalHeight = Integer.parseInt(option.getValue());
             } else {
                 throw new IllegalStateException("Unknown option for button: " + option.getType());
             }
