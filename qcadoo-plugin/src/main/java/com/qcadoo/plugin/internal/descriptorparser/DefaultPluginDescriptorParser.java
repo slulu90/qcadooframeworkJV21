@@ -91,7 +91,7 @@ public class DefaultPluginDescriptorParser implements PluginDescriptorParser {
         try {
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             try {
-                URL url = new URL("http://www.qcadoo.com");
+                URL url = java.net.URI.create("http://www.qcadoo.com").toURL();
                 url.openConnection();
                 factory.setValidating(true);
             } catch (UnknownHostException e) {

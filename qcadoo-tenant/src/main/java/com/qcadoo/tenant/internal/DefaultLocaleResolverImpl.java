@@ -34,9 +34,9 @@ import com.qcadoo.tenant.api.DefaultLocaleResolver;
 @Service
 public final class DefaultLocaleResolverImpl implements DefaultLocaleResolver {
 
-    private static final Locale PL = new Locale("pl");
+    private static final Locale PL = Locale.forLanguageTag("pl");
 
-    private static final Locale EN = new Locale("en");
+    private static final Locale EN = Locale.forLanguageTag("en");
 
     @Value("${defaultLocale}")
     private String locale;

@@ -232,7 +232,7 @@ public class ReportDevelopmentController {
 
         try {
             ReportType reportType = ReportType.valueOf(type.toUpperCase(Locale.ENGLISH));
-            Locale reportLocale = new Locale(locale);
+            Locale reportLocale = Locale.forLanguageTag(locale);
 
             Map<String, Object> parameters = new HashMap<String, Object>();
 
