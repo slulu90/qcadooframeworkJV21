@@ -76,7 +76,7 @@ public class UniversalResourceModule extends ResourceModule {
 
     private Resource getResourceFromURI(final String uri) {
         if (matcher.match(uriPattern, uri)) {
-            return applicationContext.getResource("classpath:" + uri);
+            return applicationContext.getResource("classpath:" + uri.substring(1));
         }
         return null;
     }
